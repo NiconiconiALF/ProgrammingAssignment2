@@ -38,3 +38,20 @@ cacheSolve <- function(x, ...) {
     ivs
        
 }
+
+#Sample solutions
+ x <- matrix(1:4,2,2)
+ n <- makeCacheMatrix(x)
+#first time:calculating inverse directly, because ivs is NULL
+> cacheSolve(n)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+#after first time: getting data from cache, because ivs is NOT a NULL
+> cacheSolve(n)
+#trigger the if statement
+getting inverse from the cache
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> 
